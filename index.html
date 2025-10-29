@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Premium UA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <!-- Ліва бокова панель -->
+        <aside class="sidebar" aria-label="Навігаційна панель">
+            <div class="sidebar-header">
+                <button class="menu-toggle" aria-label="Переключити меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="brand" aria-label="Бренд">
+                    <img src="img/logo-youtube.png" alt="Логотип YouTube" class="brand-logo">
+                    <span class="brand-name">Premium UA</span>
+                </div>
+            </div>
+            
+            <!-- Основне меню навігації -->
+            <nav class="main-nav" aria-label="Головне меню">
+                <button class="menu-item active" aria-label="Головна">
+                    <span class="menu-icon">🏠</span>
+                    <span class="menu-text">Головна</span>
+                </button>
+                <button class="menu-item" aria-label="Shorts">
+                    <span class="menu-icon">🎬</span>
+                    <span class="menu-text">Shorts</span>
+                </button>
+                <button class="menu-item" aria-label="Підписки">
+                    <span class="menu-icon">📺</span>
+                    <span class="menu-text">Підписки</span>
+                </button>
+                <button class="menu-item" aria-label="YouTube Music">
+                    <span class="menu-icon">🎵</span>
+                    <span class="menu-text">YouTube Music</span>
+                </button>
+            </nav>
+
+            <hr class="separator" aria-hidden="true">
+
+            <!-- Додаткове меню -->
+            <nav class="secondary-nav" aria-label="Додаткові опції">
+                <button class="menu-item" aria-label="Історія переглядів">
+                    <span class="menu-icon">🕒</span>
+                    <span class="menu-text">Історія</span>
+                </button>
+                <button class="menu-item" aria-label="Мої плейлисти">
+                    <span class="menu-icon">📚</span>
+                    <span class="menu-text">Плейлисти</span>
+                </button>
+                <button class="menu-item" aria-label="Мої відео">
+                    <span class="menu-icon">🎥</span>
+                    <span class="menu-text">Ваші Відео</span>
+                </button>
+                <button class="menu-item" aria-label="Мої курси">
+                    <span class="menu-icon">📖</span>
+                    <span class="menu-text">Ваші Курси</span>
+                </button>
+                <button class="menu-item" aria-label="Відео для перегляду пізніше">
+                    <span class="menu-icon">⏱️</span>
+                    <span class="menu-text">Подивитися пізніше</span>
+                </button>
+                <button class="menu-item" aria-label="Сподобані відео">
+                    <span class="menu-icon">👍</span>
+                    <span class="menu-text">Сподобалось</span>
+                </button>
+                <button class="menu-item" aria-label="Завантажені відео">
+                    <span class="menu-icon">📥</span>
+                    <span class="menu-text">Скачані</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Основна частина -->
+        <main class="main-panel" role="main">
+            <!-- Верхня панель: пошук та дії -->
+            <header class="topbar" aria-label="Панель пошуку та дій">
+                <div class="header-start"></div>
+                
+                <!-- Центральная часть - поиск и микрофон -->
+                <div class="search-container">
+                    <form class="search" role="search" aria-label="Пошук відео">
+                        <input type="text" 
+                               placeholder="Пошук" 
+                               aria-label="Введіть запит для пошуку"
+                               class="search-input">
+                        <button type="button" class="clear-btn" aria-label="Очистити пошук">
+                            ✕
+                        </button>
+                        <button type="button" class="keyboard-btn" aria-label="Віртуальна клавіатура">
+                            ⌨️
+                        </button>
+                        <button type="submit" class="search-btn" aria-label="Виконати пошук">
+                            🔍
+                        </button>
+                    </form>
+                    
+                    <!-- Кнопка голосового поиска -->
+                    <button class="mic-btn" aria-label="Голосовий пошук" title="Голосовий пошук">
+                        🎤
+                    </button>
+                </div>
+                
+                <!-- Правая часть - действия -->
+                <div class="actions">
+                    <button class="icon-btn create" aria-label="Створити відео або пост">
+                        <span class="btn-icon">➕</span>
+                        <span class="btn-text">Створити</span>
+                    </button>
+                    <button class="icon-btn notifications" aria-label="Сповіщення">
+                        <span class="btn-icon">🔔</span>
+                        <span class="notification-badge" aria-hidden="true">3</span>
+                    </button>
+                    <button class="avatar-btn" aria-label="Профіль користувача">
+                        <img src="img/profile.jpg" alt="Аватар користувача" class="avatar-img">
+                    </button>
+                </div>
+            </header>
+
+            <!-- Контент: сітка відео -->
+            <section class="content" aria-label="Рекомендовані відео">
+                <div class="videos-grid">
+                    <!-- Карточка 1 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Українська музика 2024" class="thumbnail">
+                                <span class="duration">8:45</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">UМ</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Українська музика 2024 - найкращі хіти</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Українська Музика</a>
+                                    <div class="video-stats">
+                                        <span class="views">542 тис. переглядів</span>
+                                        <span class="upload-time">• 1 тиждень тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Програмування на Python" class="thumbnail">
+                                <span class="duration">25:30</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">IT</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Python для початківців - повний курс</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">IT Освіта</a>
+                                    <div class="video-stats">
+                                        <span class="views">321 тис. переглядів</span>
+                                        <span class="upload-time">• 2 місяці тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Подорож Карпатами" class="thumbnail">
+                                <span class="duration">15:12</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">УК</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Подорож Карпатами - незабутні краєвиди</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Україна Краєвидами</a>
+                                    <div class="video-stats">
+                                        <span class="views">127 тис. переглядів</span>
+                                        <span class="upload-time">• 3 дні тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Кулінарні рецепти" class="thumbnail">
+                                <span class="duration">12:05</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">СУ</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Традиційна українська кухня - борщ та вареники</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Смачно по-українськи</a>
+                                    <div class="video-stats">
+                                        <span class="views">89 тис. переглядів</span>
+                                        <span class="upload-time">• 5 днів тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 5 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Технології майбутнього" class="thumbnail">
+                                <span class="duration">18:20</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">TU</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Технології 2024 - що нас чекає</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Tech UA</a>
+                                    <div class="video-stats">
+                                        <span class="views">456 тис. переглядів</span>
+                                        <span class="upload-time">• 2 тижні тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 6 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Спорт та здоров'я" class="thumbnail">
+                                <span class="duration">22:15</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">ЗС</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Ефективні тренування вдома без обладнання</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Здоровий спосіб життя</a>
+                                    <div class="video-stats">
+                                        <span class="views">234 тис. переглядів</span>
+                                        <span class="upload-time">• 1 місяць тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 7 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Освіта та навчання" class="thumbnail">
+                                <span class="duration">14:40</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">ОП</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Як швидко вивчити іноземну мову</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Освітній Простір</a>
+                                    <div class="video-stats">
+                                        <span class="views">178 тис. переглядів</span>
+                                        <span class="upload-time">• 6 днів тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 8 -->
+                    <article class="video-card" role="article">
+                        <div class="thumbnail-container">
+                            <a href="#" class="thumbnail-link">
+                                <img src="img/placeholder-320x180.png" alt="Мистецтво та творчість" class="thumbnail">
+                                <span class="duration">9:55</span>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <a href="#" class="channel-avatar-link">
+                                <div class="channel-avatar">ТМ</div>
+                            </a>
+                            <div class="video-details">
+                                <h3 class="video-title">
+                                    <a href="#">Основы малювання аквареллю для початківців</a>
+                                </h3>
+                                <div class="video-meta">
+                                    <a href="#" class="channel-name">Творча Майстерня</a>
+                                    <div class="video-stats">
+                                        <span class="views">67 тис. переглядів</span>
+                                        <span class="upload-time">• 4 дні тому</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Ваш скрипт -->
+    <script>
+        // Ваш скрипт буде додано тут
+        // Додайте ваш JavaScript код нижче
+        
+        console.log('Сторінка YouTube Premium UA завантажена');
+        
+        // Приклад скрипта - можете замінити на ваш власний
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM повністю завантажений');
+            
+            // Додаємо обробник для кнопки пошуку
+            const searchForm = document.querySelector('.search');
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const searchInput = this.querySelector('.search-input');
+                    if (searchInput.value.trim()) {
+                        alert('Пошук: ' + searchInput.value);
+                    }
+                });
+            }
+            
+            // Обробник для кнопки мікрофона
+            const micBtn = document.querySelector('.mic-btn');
+            if (micBtn) {
+                micBtn.addEventListener('click', function() {
+                    alert('Голосовий пошук активовано!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
