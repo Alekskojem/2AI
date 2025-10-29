@@ -433,7 +433,9 @@ body::before {
     font-weight: 500;
     line-height: 1.4;
     display: -webkit-box;
+    display: box; /* Standard property for compatibility */
     -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property for compatibility */
     -webkit-box-orient: vertical;
     overflow: hidden;
     transition: color 0.2s;
